@@ -1,0 +1,647 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+/* header */ 
+  nav{
+      display: flex;
+      flex-basis: 50%;
+      padding: 10px;
+      background-color: rgb(42, 42, 78);
+     }
+  nav #logo{
+      margin: 5px 10px;
+      float: left;
+      flex-basis: 50%;
+      font-size: 22px;
+      line-height: 30px;
+      letter-spacing: 2px;
+      color: white;
+  }
+  nav #nav-list ul{
+      display: flex;
+      margin: 5px 10px;
+    }
+  nav #nav-list ul li{
+    margin: 5px 5px; 
+    padding: 5px;
+    border: 2px solid white;
+    font-size: 12px;
+    color: white;
+    }
+   
+/* header ends  */
+.section-heading{
+    font-size: 4rem;
+    color: gray;
+    font-weight: 300;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    justify-content: center;
+    line-height: 4rem;
+}
+.section-heading span{
+     color: black;
+}
+u{
+    color: gray;
+    
+}
+html{
+    font-size: 10px;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+ }
+/* <!-- Hero Section   ---> */
+#hero{
+    background: url('./bg2.jpg');
+    background-size: cover;
+    background-position:top center;
+    position: relative;
+    z-index: 1;
+} 
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    opacity: .5;
+    z-index: -1;
+}
+#hero h1{
+    font-size: 2.5rem;
+    width: fit-content;
+    display: block;
+    position: relative;
+    color: transparent;
+     animation: text_reveal 1s ease-in-out forwards;
+}
+#hero h1:nth-child(1){
+    animation-delay: 1s;
+}
+#hero h1:nth-child(2){
+    animation-delay: 2.2s;
+}
+#hero h1:nth-child(3){
+    animation: change-color 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+#hero h1 span{
+    position: absolute;
+    background-color: gray;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    animation: text_reveal_box 1s ease-in-out;
+    animation-delay: 1s;
+}
+#hero h1:nth-child(1) span{
+    animation-delay: .5s;
+}
+#hero h1:nth-child(2) span{
+  animation-delay: 1.7s;
+}
+#hero h1:nth-child(3) span{
+    animation-delay: 2.8s;
+}
+/* hero section ends */
+.cta{
+    display: inline-block;
+    font-size: 2rem;
+    border: 2px solid gray;
+    color: white;
+    /* background-color: gray; */
+    padding: 2px 12px;
+    margin: 10px auto;
+}
+.cta:hover{
+    border-color: white;
+    background-color: gray;
+
+}
+/* services section */
+#service{ 
+text-align: center;
+margin: 0px auto; 
+}
+.services{
+flex-direction: column;
+margin: 0px auto;
+text-align: center;
+max-width: fit-content;
+padding: 0px 0px;
+max-height: fit-content
+}
+.service-item .icon img{
+    height:50px;
+    width: 50px;
+}
+#service-top{
+    margin: 0px auto;
+}
+#service #service-top p{
+    font-size: 1.8rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: .07rem;
+}
+#service-bottom{
+    margin: 0px auto;
+    display: flex;
+    flex-wrap: wrap ;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-item{
+      border-radius: 15px;
+      color: white;
+    margin: 10px auto;
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 15px;
+    background-image: url('./cont1.jpg');
+   
+} 
+.service-item h2{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-align: center;
+}
+.service-item p{
+    font-size: 1.5rem;
+     
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+/* End services section */
+
+/* about */
+#about{
+    display: flex;
+}
+#about-me{
+    display: flex;
+    margin: 0px auto;
+    flex-direction: column-reverse;
+    padding: 10px auto;
+    align-items: center;
+    justify-content: center;
+}
+#imag-sign
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+.signature{
+    
+    align-items: center;
+    justify-content: center;
+}
+.signature img{
+    height: 133px;
+    width: 300px;
+}
+#founder-image img{
+    width: 200px;
+    height: 300px;
+    border: 7px solid white;
+    align-items: center;
+     border-radius: 15px;
+    /* position: relative; */
+}
+#founder-image{
+    position: relative;
+}
+#founder-image::after{
+     content: '';
+     position: absolute;
+     top: 33px;
+     left: -33px;
+     border: 7px solid gray;
+     border-radius: 10px;
+     width: 90%;
+     height: 90%;
+     z-index: -1;
+    
+}
+#biography{
+    margin-top: 0px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: .05rem;
+    flex-wrap: wrap;
+    /* flex-basis: 80%; */
+}
+#biography p{
+    text-align: justify;
+    padding: 10px 30px;
+    font-size: 2rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300px;
+    letter-spacing: .05rem;
+}
+/* about section ends */
+
+/* social-media ends */
+#social-media{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#raech-us{
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 auto; */
+    align-items: center;
+    justify-content: center;
+}
+#raech-us h1{
+    text-align: center;
+    font-size: 3rem;
+     }
+#raech-us h2{ 
+    text-align: center;
+    font-size: 2rem;
+
+}
+#s-m-icon{
+    margin: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}    
+    #s-m-icon img{
+        width: 50px;
+        height: 50px;
+        margin: 10px 15px;
+        transition-property: all 0.3s ease-in-out;
+    }
+
+#s-m-icon img:hover{
+    transform: scale(1.05);
+}
+/* social-media ends */
+
+/* contact-section */
+#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bcbaba;
+}
+#contact-content{
+    display: flex;
+     
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+} 
+
+.contact-content{
+    margin: 20px 25px;
+    width: 290px;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    background-color: #eee5e5;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px black;
+    transition-property: all .2s ease-in-out;
+}
+.contact-content:hover{
+      transform: scale(1.05);
+}
+.contact-content img{
+      width: 70px ;
+      height: 70px ;
+      margin: 10px auto;
+}
+.contact-content h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+.contact-content h2{
+    line-height: 26px;
+    padding: 2px 10px;
+    font-size: 2rem;
+    text-align: center;
+  }
+/* contact-section ends */
+
+/* footer */
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/* footer ends */
+/* Keyframes */
+@keyframes text_reveal_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: white;
+    }
+}
+@keyframes change-color{
+    100%{
+        color: grey;
+    }
+}
+/* End keyframes */
+
+/* media queries for different devices */
+
+/* Device 1:   Mobile Devices */
+@media (min-width:320px) and (max-width:480px){
+    #hero h1 {
+        font-size: 2rem;
+       }
+       .cta {
+          padding: 4px 25px;
+         }
+         .section-heading {
+            margin: 20px auto;
+            letter-spacing: .5rem;
+            }
+            .service-item h2 {
+                font-size: 1.8rem;
+            }
+            #service #service-top p {
+                 letter-spacing: .08rem;
+                margin: 6px 24px;
+            }
+            .service-item p {
+                font-size: 1.5rem;
+                 
+            }
+            #biography p {
+                 margin-top: 5px;
+               }
+               #founder-image img {
+                width: 150px;
+                height: 200px;
+               }
+               #founder-image::after {
+                top: 23px;
+                left: -20px;
+               }
+               .signature img {
+                height: 115px;
+                width: 229px;
+            }
+            #raech-us h1 {
+                font-size: 2rem;
+            }
+            #raech-us h2 {
+               font-size: 1.5rem;
+            }
+            #s-m-icon img {
+                width: 40px;
+                height: 40px;
+                margin: 10px 10px;
+            }
+            .contact-content {
+                margin: 10px 18px;
+                width: 230px;
+                height: 179px;
+            }
+            .contact-content img {
+                width: 55px;
+                height: 55px;
+            }
+            .contact-content h1 {
+                font-size: 2.5rem;
+            }
+            .contact-content h2 {
+                 font-size: 1.5rem;
+            }
+}
+/* Device 2:  iPads and Tablets */
+@media (min-width:480px) and (max-width:768px){
+    #hero h1 {
+        font-size: 3rem;
+    }
+    .cta {
+        font-size: 2.5rem;
+        border: 4px solid gray;
+        padding: 7px 35px;
+        margin: 26px auto;
+    }
+    .section-heading {
+        font-size: 5rem;
+        margin: 25px auto;
+        letter-spacing: 1rem;
+        line-height: 5rem;
+    }
+    #service #service-top p {
+        font-size: 2.8rem;
+        margin-top: 10px;
+        line-height: 3.8rem;
+        letter-spacing: .09rem;
+        padding: 2px 20px;
+   }
+   .service-item{
+   flex-basis: 66%;
+}
+
+#biography p {
+
+    padding: 10px 35px;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    letter-spacing: .08rem;
+}
+.contact-content {
+    width: 367px;
+}
+}
+
+/* Device 3:  Small Screens, Laptops*/
+
+@media (min-width:769px) and (max-width:1024px){
+    #hero h1 {
+        font-size: 4.1rem;
+    }
+    .cta {
+        font-size: 3rem;
+        border: 5px solid gray;
+        padding: 5px 40px;
+        margin: 20px auto;
+    }
+    .section-heading {
+        font-size: 5rem;
+        margin-top: 20px;
+        letter-spacing: 1.2rem;
+        line-height: 5rem;
+     }
+    #service #service-top p {
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+        padding: 15px;
+    }
+    .service-item {
+        flex-basis: 44%;
+        padding: 20px;
+    }
+    #about-me {
+         flex-direction: row-reverse;
+       }
+    #biography p{
+    padding: 10px 30px;
+    font-size: 2rem;
+    margin-top: 25px;
+    line-height: 2.5rem;
+    }
+    #founder-image img {
+        width: 180px;
+        height: 260px;
+    }
+    #founder-image::after{
+    top: 33px;
+    left: -22px;
+    }
+    .signature img {
+        height: 140px;
+        width: 275px;
+    }
+    #raech-us h1 {
+        font-size: 3.5rem;
+    }
+    #raech-us h2 {
+        font-size: 2.5rem;
+    }
+    #s-m-icon img {
+        width: 60px;
+        height: 60px;
+        margin: 10px 40px;
+    } 
+    .contact-content {
+        margin: 35px 12px;
+        width: 230px;
+        height: 232px;
+    }
+    
+ #contact .contact-content .gmail-h2{
+        font-size: 1.65rem
+    }
+}
+/* device 4: Large Computers, Desktops */
+@media (min-width:1025px) and (max-width:1500px){
+    #hero h1 {
+        font-size: 4rem;
+    }
+    .cta{
+    font-size: 3rem;
+    border: 4px solid gray;
+    padding: 4px 24px;
+        }
+.section-heading{
+        font-size: 6rem;
+        letter-spacing: 1.5rem;
+        line-height: 7rem;
+    }
+    #service #service-top p {
+        font-size: 3rem;
+        margin: 10px 45px 20px 45px;
+        line-height: 3.5rem;
+        letter-spacing: .05rem;
+    }
+    .service-item {
+         margin: 10px 25px;
+        flex-basis: 45%;
+        }
+        .service-item p{
+            font-size: 2rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+        }
+        
+        .service-item h2{
+            font-size: 3.5rem;
+             
+        }
+        
+      .service-item .icon img{
+            height:70px;
+            width: 70px;
+        }
+    #about-me{
+         flex-direction: row-reverse;
+        }
+    #biography p{ 
+    font-size: 2rem;
+    line-height: 2.2rem;
+    }
+    #founder-image img{
+    width: 150px;
+    height: 230px;
+    }
+    #founder-image::after{
+        top: 20px;
+        left: -20px;
+    }
+    #raech-us h1 {
+        font-size: 3rem;
+    }
+    #raech-us h2 {
+        font-size: 2rem;
+    }
+    #s-m-icon img {
+        width: 70px;
+        height: 70px;
+        margin: 10px 30px;     
+    }
+    .signature img {
+        height: 90px;
+        width: 250px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Ends media queries for different devices */
+
+/* common classes */
